@@ -15,6 +15,12 @@ ENV/
 # Reports & build artifacts
 reports/
 build/
+.coverage
+.pytest_cache/
+
+# Qase (third-party test report) artifacts
+qaseio.lock
+build/qase-report/
 
 # OS / editor
 .DS_Store
