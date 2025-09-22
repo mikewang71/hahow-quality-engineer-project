@@ -257,7 +257,7 @@ jobs:
 **Mike Wang** - Quality Engineer
 
 - GitHub: [@mikewang71](https://github.com/mikewang71)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/mikewang0701)
 
 ## 🙏 致謝
 
