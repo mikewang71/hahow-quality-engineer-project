@@ -36,7 +36,7 @@
 
 ```bash
 # 1. 複製專案
-git clone https://github.com/your-username/hahow-quality-engineer-project.git
+git clone https://github.com/mikewang71/hahow-quality-engineer-project.git
 cd hahow-quality-engineer-project
 
 # 2. 自動設定環境
@@ -256,7 +256,7 @@ jobs:
 
 **Mike Wang** - Quality Engineer
 
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: [@mikewang71](https://github.com/mikewang71)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
 
 ## 🙏 致謝
@@ -270,9 +270,9 @@ jobs:
 
 ## 📊 專案統計
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/hahow-quality-engineer-project?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/hahow-quality-engineer-project?style=social)
-![GitHub issues](https://img.shields.io/github/issues/your-username/hahow-quality-engineer-project)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/your-username/hahow-quality-engineer-project)
+![GitHub stars](https://img.shields.io/github/stars/mikewang71/hahow-quality-engineer-project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mikewang71/hahow-quality-engineer-project?style=social)
+![GitHub issues](https://img.shields.io/github/issues/mikewang71/hahow-quality-engineer-project)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/mikewang71/hahow-quality-engineer-project)
 
-**⭐ 如果這個專案對您有幫助，請給它一個 Star！**# hahow-quality-engineer-project
+**⭐ 如果這個專案對您有幫助，請給它一個 Star！**
