@@ -35,6 +35,10 @@ jobs:
         echo "開始執行 API 自動化測試..."
         python api_automation.py
         
+    - name: 📁 準備報告目錄 (API)
+      run: |
+        mkdir -p reports
+        
     - name: 📊 執行 pytest API 測試套件
       run: |
         pytest api_automation.py -v --tb=short
@@ -66,22 +70,26 @@ jobs:
         cache: 'pip'
         
     - name: 🌐 安裝 Chrome 瀏覽器
-      run: |
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable
         
     - name: 📦 安裝 UI 測試依賴
       run: |
         python -m pip install --upgrade pip
         pip install -r ui_requirements.txt
         
+    - name: 📁 準備測試目錄 (UI)
+      run: |
+        mkdir -p reports screenshots logs
+        
     - name: 🔧 設定測試環境
       run: |
         python setup_environment.py
         
     - name: 🧪 執行 UI 測試
+      env:
+        CHROME_BIN: google-chrome
       run: |
         echo "開始執行 UI 自動化測試..."
         python ui_automation.py
@@ -131,11 +139,13 @@ jobs:
         pip install -r ui_requirements.txt
         
     - name: 🌐 安裝 Chrome 瀏覽器
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable
+        
+    - name: 📁 準備測試目錄 (整合)
       run: |
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+        mkdir -p reports screenshots logs
         
     - name: 🔧 設定測試環境
       run: |
