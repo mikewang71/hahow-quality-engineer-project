@@ -1,29 +1,4 @@
-class GitHubUIClient:
-    """GitHub UI 自動化測試客戶端"""
-    
-    def __init__(self, headless: bool = True, timeout: int = 15):
-        self.timeout = timeout
-        self.driver = None
-        self.wait = None
-        self.screenshots_dir = "screenshots"
-        self._setup_directories()
-        self._setup_driver(headless)
-    
-    def _setup_directories(self):
-        """建立必要的目錄"""
-        os.makedirs(self.screenshots_dir, exist_ok=True)
-        os.makedirs("logs", exist_ok=True)
-    
-    def _setup_driver(self, headless: bool):
-        """設定 Chrome WebDriver"""
-        chrome_options = Options()
-        if headless:
-            chrome_options.add_argument('--headless')
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--window-size=1920,1080')
-        chrome_options.add_argument('--import time
+import time
 import re
 import os
 import json
@@ -55,7 +30,14 @@ class GitHubUIClient:
         self.timeout = timeout
         self.driver = None
         self.wait = None
+        self.screenshots_dir = "screenshots"
+        self._setup_directories()
         self._setup_driver(headless)
+    
+    def _setup_directories(self):
+        """建立必要的目錄"""
+        os.makedirs(self.screenshots_dir, exist_ok=True)
+        os.makedirs("logs", exist_ok=True)
     
     def _setup_driver(self, headless: bool):
         """設定 Chrome WebDriver"""
@@ -121,6 +103,16 @@ class GitHubUIClient:
     def get_page_source(self) -> str:
         """取得頁面原始碼"""
         return self.driver.page_source
+    
+    def take_screenshot(self, filename: str = None) -> str:
+        """截圖並保存"""
+        if not filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"screenshot_{timestamp}.png"
+        
+        filepath = os.path.join(self.screenshots_dir, filename)
+        self.driver.save_screenshot(filepath)
+        return filepath
     
     def close(self):
         """關閉瀏覽器"""
