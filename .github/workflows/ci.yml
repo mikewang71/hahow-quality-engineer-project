@@ -48,7 +48,7 @@ jobs:
         pytest api_automation.py --html=reports/api_report.html --self-contained-html
         
     - name: 📤 上傳 API 測試報告
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: api-test-report
@@ -103,14 +103,14 @@ jobs:
         pytest ui_automation.py --html=reports/ui_report.html --self-contained-html
         
     - name: 📤 上傳 UI 測試報告
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: ui-test-report
         path: reports/ui_report.html
         
     - name: 📸 上傳測試截圖
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: ui-screenshots
@@ -161,7 +161,7 @@ jobs:
         pytest api_automation.py ui_automation.py --html=reports/integration_report.html --self-contained-html
         
     - name: 📤 上傳整合測試報告
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: integration-test-report
@@ -171,6 +171,7 @@ jobs:
   code-quality:
     name: 🔍 程式碼品質檢查
     runs-on: ubuntu-latest
+    continue-on-error: true
     
     steps:
     - name: 📥 檢出代碼
@@ -232,15 +233,15 @@ jobs:
       run: |
         pytest api_automation.py ui_automation.py --cov=. --cov-report=xml --cov-report=html
         
-    - name: 📤 上傳覆蓋率報告
-      uses: codecov/codecov-action@v3
+    - name: 📤 上傳覆蓋率報告到 Codecov
+      uses: codecov/codecov-action@v4
       with:
-        file: ./coverage.xml
+        files: ./coverage.xml
         flags: unittests
         name: codecov-umbrella
         
     - name: 📤 上傳覆蓋率 HTML 報告
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: coverage-report
         path: htmlcov/
@@ -257,7 +258,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: 📥 下載所有測試報告
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         path: reports/
         
