@@ -152,8 +152,8 @@ Closes #(issue number)
 ## 📞 聯絡方式
 
 - **GitHub Issues**: [專案 Issues](https://github.com/your-username/hahow-quality-engineer-project/issues)
-- **Email**: your-email@example.com
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
+- **Email**: encoreh48080@gmail.com
+- **LinkedIn**: [MikeWang](https://linkedin.com/in/mikewang0701)
 
 ## 🙏 致謝
 
