@@ -70,4 +70,8 @@ qaseio.lock
 
 # Temporary files
 *.tmp
-*.temp
+*.temp.venv/
+__pycache__/
+logs/
+reports/
+.pytest_cache/

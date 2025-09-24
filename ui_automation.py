@@ -15,12 +15,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
 import requests
 
-# 嘗試自動安裝 ChromeDriver
+# 嘗試自動安裝 ChromeDriver（如失敗則改用 Selenium Manager）
 try:
     import chromedriver_autoinstaller
-    chromedriver_autoinstaller.install()
+    try:
+        # 在某些環境（如公司代理或憑證問題）可能下載失敗
+        chromedriver_autoinstaller.install()
+    except Exception as autoinstall_error:
+        print(f"警告: chromedriver_autoinstaller 失敗，改用 Selenium 內建管理器。原因: {autoinstall_error}")
 except ImportError:
-    print("警告: chromedriver_autoinstaller 未安裝，請確保 ChromeDriver 在 PATH 中")
+    print("警告: chromedriver_autoinstaller 未安裝，將使用 Selenium 內建管理器")
 
 
 class GitHubUIClient:
