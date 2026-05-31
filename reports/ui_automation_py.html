@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for ui_automation.py: 58%</title>
+    <title>Coverage for ui_automation.py: 62%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_6b508a39.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>ui_automation.py</b>:
-            <span class="pc_cov">58%</span>
+            <span class="pc_cov">62%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">284 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">165<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">119<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">175<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">109<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.7">coverage.py v7.10.7</a>,
-            created at 2026-05-30 05:54 +0000
+            created at 2026-05-31 06:28 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -247,19 +247,19 @@
     <p class="run run2"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">                <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">                <span class="key">for</span> <span class="nam">element</span> <span class="key">in</span> <span class="nam">contributor_elements</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">                    <span class="nam">username</span> <span class="op">=</span> <span class="nam">element</span><span class="op">.</span><span class="nam">get_attribute</span><span class="op">(</span><span class="str">"href"</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">"/"</span><span class="op">)</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">                    <span class="key">if</span> <span class="nam">username</span> <span class="key">and</span> <span class="nam">username</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"names"</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">                        <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"names"</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">                    <span class="nam">username</span> <span class="op">=</span> <span class="nam">element</span><span class="op">.</span><span class="nam">get_attribute</span><span class="op">(</span><span class="str">"href"</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">"/"</span><span class="op">)</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">                    <span class="key">if</span> <span class="nam">username</span> <span class="key">and</span> <span class="nam">username</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"names"</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">                        <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"names"</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t172" href="#t172">172</a></span><span class="t">                        <span class="com"># &#29554;&#21462;&#26356;&#22810;&#35443;&#32048;&#36039;&#35338;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t">                        <span class="nam">img_element</span> <span class="op">=</span> <span class="nam">element</span><span class="op">.</span><span class="nam">find_element</span><span class="op">(</span><span class="nam">By</span><span class="op">.</span><span class="nam">TAG_NAME</span><span class="op">,</span> <span class="str">"img"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">                        <span class="nam">avatar_url</span> <span class="op">=</span> <span class="nam">img_element</span><span class="op">.</span><span class="nam">get_attribute</span><span class="op">(</span><span class="str">"src"</span><span class="op">)</span> <span class="key">if</span> <span class="nam">img_element</span> <span class="key">else</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t">                        <span class="nam">img_element</span> <span class="op">=</span> <span class="nam">element</span><span class="op">.</span><span class="nam">find_element</span><span class="op">(</span><span class="nam">By</span><span class="op">.</span><span class="nam">TAG_NAME</span><span class="op">,</span> <span class="str">"img"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">                        <span class="nam">avatar_url</span> <span class="op">=</span> <span class="nam">img_element</span><span class="op">.</span><span class="nam">get_attribute</span><span class="op">(</span><span class="str">"src"</span><span class="op">)</span> <span class="key">if</span> <span class="nam">img_element</span> <span class="key">else</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t175" href="#t175">175</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">                        <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"details"</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="op">{</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">                            <span class="str">"username"</span><span class="op">:</span> <span class="nam">username</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">                            <span class="str">"profile_url"</span><span class="op">:</span> <span class="str">f"https://github.com/{username}"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">                            <span class="str">"avatar_url"</span><span class="op">:</span> <span class="nam">avatar_url</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">                        <span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">                        <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"details"</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="op">{</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">                            <span class="str">"username"</span><span class="op">:</span> <span class="nam">username</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">                            <span class="str">"profile_url"</span><span class="op">:</span> <span class="str">f"https://github.com/{username}"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">                            <span class="str">"avatar_url"</span><span class="op">:</span> <span class="nam">avatar_url</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">                        <span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t181" href="#t181">181</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t182" href="#t182">182</a></span><span class="t">            <span class="com"># &#26041;&#27861;2&#65306;&#22914;&#26524;&#25214;&#19981;&#21040; Contributors &#37832;&#25509;&#65292;&#22039;&#35430;&#20854;&#20182;&#26041;&#24335;</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t183" href="#t183">183</a></span><span class="t">            <span class="key">if</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">"count"</span><span class="op">]</span> <span class="op">==</span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -450,13 +450,13 @@
     <p class="run"><span class="n"><a id="t368" href="#t368">368</a></span><span class="t">        <span class="nam">print</span><span class="op">(</span><span class="str">f"&#21512;&#20316;&#32773;&#25976;&#37327;: {contributors_info['count']}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t369" href="#t369">369</a></span><span class="t">        <span class="nam">print</span><span class="op">(</span><span class="str">f"&#21512;&#20316;&#32773;&#21517;&#21934;:"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t370" href="#t370">370</a></span><span class="t">        <span class="key">for</span> <span class="nam">i</span><span class="op">,</span> <span class="nam">name</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">contributors_info</span><span class="op">[</span><span class="str">'names'</span><span class="op">]</span><span class="op">,</span> <span class="num">1</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t371" href="#t371">371</a></span><span class="t">            <span class="nam">print</span><span class="op">(</span><span class="str">f"{i}. {name}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t371" href="#t371">371</a></span><span class="t">            <span class="nam">print</span><span class="op">(</span><span class="str">f"{i}. {name}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t372" href="#t372">372</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t373" href="#t373">373</a></span><span class="t">        <span class="com"># &#39023;&#31034;&#35443;&#32048;&#36039;&#35338;</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t374" href="#t374">374</a></span><span class="t">        <span class="key">if</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">'details'</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t375" href="#t375">375</a></span><span class="t">            <span class="nam">print</span><span class="op">(</span><span class="str">f"\n&#35443;&#32048;&#36039;&#35338;:"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t376" href="#t376">376</a></span><span class="t">            <span class="key">for</span> <span class="nam">detail</span> <span class="key">in</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">'details'</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t377" href="#t377">377</a></span><span class="t">                <span class="nam">print</span><span class="op">(</span><span class="str">f"- {detail['username']}: {detail['profile_url']}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t375" href="#t375">375</a></span><span class="t">            <span class="nam">print</span><span class="op">(</span><span class="str">f"\n&#35443;&#32048;&#36039;&#35338;:"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t376" href="#t376">376</a></span><span class="t">            <span class="key">for</span> <span class="nam">detail</span> <span class="key">in</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">'details'</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t377" href="#t377">377</a></span><span class="t">                <span class="nam">print</span><span class="op">(</span><span class="str">f"- {detail['username']}: {detail['profile_url']}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t378" href="#t378">378</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t379" href="#t379">379</a></span><span class="t">        <span class="com"># &#39511;&#35657;&#32080;&#26524;</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t380" href="#t380">380</a></span><span class="t">        <span class="key">assert</span> <span class="nam">contributors_info</span><span class="op">[</span><span class="str">'count'</span><span class="op">]</span> <span class="op">>=</span> <span class="num">0</span>&nbsp;</span><span class="r"></span></p>
@@ -580,7 +580,7 @@
             <a class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.7">coverage.py v7.10.7</a>,
-            created at 2026-05-30 05:54 +0000
+            created at 2026-05-31 06:28 +0000
         </p>
     </div>
 </footer>
